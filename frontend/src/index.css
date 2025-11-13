@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: Outfit;
+}
+
+@theme{
+    --color-primary : #5f6FFF;
+
+}
+
+@layer utilities {
+  .active hr {
+    display: block;
+    background-color: var(--color-primary);
+  }
+  ::-webkit-scrollbar{
+    @apply hidden
+  }
+
+  @media (max-width:740px) {
+    .active p{
+      @apply text-white bg-primary
+    }
+  }
+}
